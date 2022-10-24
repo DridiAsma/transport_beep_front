@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1666654926113,
+  "index": "https:///DridiAsma.github.io/transport_beep_front/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https:///DridiAsma.github.io/transport_beep_front/favicon.ico",
+        "https:///DridiAsma.github.io/transport_beep_front/index.html",
+        "https:///DridiAsma.github.io/transport_beep_front/main.5a287f20b14e8538.js",
+        "https:///DridiAsma.github.io/transport_beep_front/manifest.webmanifest",
+        "https:///DridiAsma.github.io/transport_beep_front/polyfills.9b0f525a2c7eb736.js",
+        "https:///DridiAsma.github.io/transport_beep_front/runtime.90fb2497eeab69bf.js",
+        "https:///DridiAsma.github.io/transport_beep_front/styles.ef46db3751d8e999.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-128x128.png",
+        "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-144x144.png",
+        "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-152x152.png",
+        "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-192x192.png",
+        "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-384x384.png",
+        "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-512x512.png",
+        "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-72x72.png",
+        "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https:///DridiAsma.github.io/transport_beep_front/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https:///DridiAsma.github.io/transport_beep_front/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https:///DridiAsma.github.io/transport_beep_front/index.html": "6a410f397ac2f455ffdf89818b5e49f5f35a80df",
+    "https:///DridiAsma.github.io/transport_beep_front/main.5a287f20b14e8538.js": "e24722f9c823eb9023087407d033c283d0e3a55d",
+    "https:///DridiAsma.github.io/transport_beep_front/manifest.webmanifest": "27437ef05748792d7de02ec444bd19e857ffaa31",
+    "https:///DridiAsma.github.io/transport_beep_front/polyfills.9b0f525a2c7eb736.js": "3b15cafdc27a41ec2bb650be5844b598cd1e99f2",
+    "https:///DridiAsma.github.io/transport_beep_front/runtime.90fb2497eeab69bf.js": "5b1b43b66e842d9ef8dc75589b0bf28665d54ac7",
+    "https:///DridiAsma.github.io/transport_beep_front/styles.ef46db3751d8e999.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
