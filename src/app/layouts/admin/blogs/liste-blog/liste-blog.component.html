@@ -1,0 +1,58 @@
+
+<div class="container">
+  <div class="col-sm-20">
+    <h2 class="text-center">Lites <b>Posts</b></h2>
+  </div>
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-16">
+            <a routerLink="/admin/addblog" class="btn btn-primary btn-sm">
+              <i class="mdi mdi-plus-circle mr-2"></i>Ajouter</a>
+
+            <div class="search-box">
+              <i class="material-icons">&#xE8B6;</i>
+              <input type="text" class="form-control" placeholder="Search&hellip;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped table-hover table-bordered">
+        <thead>
+          <tr>
+
+            <th>Titre<i class="fa fa-sort"></i></th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Date <i class="fa fa-sort"></i></th>
+            <th>Action<i class="fa fa-sort"></i></th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <tr *ngFor="let blog of blogs">
+            <td>{{blog.titre}}</td>
+            <td>{{blog.description}}</td>
+            <td><img class="card-img-top img-responsive" src="{{imageDirectoryPath}}{{blog.images}}" style="height:50px; width:50px" alt=""></td>
+            <td>{{blog.jour}}</td>
+
+            <td>
+              <a class="edit" title="Edit" (click)="modifierblog(blog.id)"   data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+              <a  class="delete" title="Delete" (click)="suppBlog(blog.id)" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

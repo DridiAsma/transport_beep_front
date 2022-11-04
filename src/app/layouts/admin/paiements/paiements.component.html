@@ -1,0 +1,81 @@
+<!-- Tableau de liste-->
+<div class="row">
+  <div class="col-12">
+
+          <div class="card">
+              <div class="card-header">
+                  <h4>Ajouter Methode de paiement</h4>
+              </div>
+              <form>
+              <div class="card-body">
+
+                  <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Libelle</label>
+                      <div class="col-sm-12 col-md-7">
+                          <input type="text" class="form-control" name="libelle" formControlName="libelle">
+                      </div>
+
+                  </div>
+
+
+                  <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Types </label>
+                      <div class="col-sm-12 col-md-7">
+                          <input type="text" formControlName="types" class="form-control" id="types" name="types">
+                      </div>
+
+                  </div>
+                  <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3 ">Image </label>
+                      <div class="col-sm-12 col-md-7 ">
+                          <input type="file" class="form-control" formControlName="img" id="img" name="img">
+                      </div>
+
+                  </div>
+
+                  <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                      <div class="col-sm-12 col-md-7 ">
+                          <button type="submit" class="btn btn-primary"> Enregister </button>
+                      </div>
+                  </div>
+              </div>
+            </form>
+          </div>
+
+  </div>
+</div>
+
+
+<div class="card ">
+  <div class="card-header ">
+      <h5>Liste de Paiement</h5>
+  </div>
+  <div class="card-body ">
+      <div class="table-responsive ">
+          <table class="table table-bordered ">
+              <thead>
+                  <tr>
+                      <th scope="col">Id</th>
+                      <th scope="col">Libelle</th>
+                      <th scope="col">Types</th>
+                      <th scope="col">Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let payer of paiements">
+                    <td>{{payer.id}}</td>
+                      <td>{{payer.libelle}}</td>
+                      <td>{{payer.types}}</td>
+
+                      <td>
+                          <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip"><i class="fas fa-pencil-alt "></i></a>
+                          <a class="btn btn-danger btn-action" data-toggle="tooltip" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue? " data-confirm-yes="alert( 'Deleted ') "><i class="fas fa-trash "></i></a>
+                      </td>
+
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

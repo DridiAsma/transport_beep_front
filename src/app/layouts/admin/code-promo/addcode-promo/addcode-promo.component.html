@@ -1,0 +1,94 @@
+<div class="card">
+  <div class="card-header">
+      <h4>Ajouter un code promotionnel Taxi</h4>
+      <div class="card-header-action">
+          <a routerLink="/admin/allcodepromo" class="btn btn-lg btn-outline-info">Annuler</a>
+      </div>
+  </div>
+  <form (ngSubmit)="AjouterCode(f)" #f="ngForm">
+      <div class="card-body">
+          <div class="form-row">
+              <!-- code validation start here -->
+              <div class="form-group col-md-6">
+                  <label>Nom du code</label>
+                  <input type="text"  placeholder=".." class="form-control" required name="promo_code" #promo_code="ngModel" maxlength="50" ngModel>
+                  <div *ngIf="promo_code.invalid && (promo_code.dirty || promo_code.touched)" class="alert alert-danger">
+                      <div *ngIf="promo_code.errors?.['required']">
+                          Name is required.
+                      </div>
+                      <div *ngIf="promo_code.errors?.['maxlength']">
+                          Name must be at least 4 characters long.
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                  <label for="nom">Date d'expiration</label>
+                  <input type="date" placeholder="..." class="form-control" name="date_expiration" required #date_expiration="ngModel" ngModel>
+                  <div *ngIf="date_expiration.invalid && (date_expiration.dirty || date_expiration.touched)" class="alert alert-danger">
+                      <div *ngIf="date_expiration.errors?.['required']">
+                          Name is required.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label for="type_promo">Type de réduction</label>
+                  <select class="form-control selectric" id="type_promo" placeholder="Password" #type_promo="ngModel" required name="type_promo" ngModel>
+                       <option value="">Selection Type</option>
+                        <option value="montant">Monatnt</option>
+                        <option value="pourcentage">Pourcentage %</option>
+                  </select>
+                  <div *ngIf="type_promo.invalid && (type_promo.dirty || type_promo.touched)" class="alert alert-danger">
+                      <div *ngIf="type_promo.errors?.['required']">
+                          Name is required.
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                  <label>Montant de la remise</label>
+                  <input type="text"  placeholder=".." class="form-control" name="remise_mountant" required #remise_mountant="ngModel" ngModel>
+                  <div *ngIf="remise_mountant.invalid && (remise_mountant.dirty || remise_mountant.touched)" class="alert alert-danger">
+                      <div *ngIf="remise_mountant.errors?.['required']">
+                          Name is required.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label>Description Promo</label>
+                  <input type="text" placeholder=".." class="form-control" name="promo_description" #promo_description="ngModel" required ngModel>
+                  <div *ngIf="promo_description.invalid && (promo_description.dirty || promo_description.touched)" class="alert alert-danger">
+                      <div *ngIf="promo_description.errors?.['required']">
+                          Name is required.
+                      </div>
+                  </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                  <label>Status</label>
+                  <select class="form-control selectric" id="status" placeholder="Selection" #status="ngModel" required name="status" ngModel>
+                     <option value="">Selection Status</option>
+                      <option value="oui">Active</option>
+                      <option value="non">Desactive</option>
+                  </select>
+                  <div *ngIf="status.invalid && (status.dirty || status.touched)" class="alert alert-danger">
+                      <div *ngIf="status.errors?.['required']">
+                          Name is required.
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Phone validation end here -->
+
+      <div class="card-footer">
+          <button class="btn btn-primary" type="submit">Sauvgarder</button>
+      </div>
+  </form>
+</div>

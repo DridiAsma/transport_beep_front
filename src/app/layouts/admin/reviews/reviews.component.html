@@ -1,0 +1,28 @@
+<!-- Tableau de liste-->
+
+<div class="card ">
+  <div class="card-header">
+      <h5>Liste de Review</h5>
+  </div>
+  <div class="card-body">
+      <div class="table-responsive">
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th scope="col">Id</th>
+                      <th scope="col">Rate</th>
+                      <th scope="col">Message</th>
+
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let note of myArray">
+                      <td scope="row">{{note.id}}</td>
+                      <td>{{note.rate}}</td>
+                      <td>{{note.content}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

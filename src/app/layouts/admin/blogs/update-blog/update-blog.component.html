@@ -1,0 +1,50 @@
+
+<div class="card">
+    <div class="card-header text-center">
+      <strong>Modifier</strong> Postes
+  
+    </div>
+  
+  
+    <form (ngSubmit)="onSubmit()"  [formGroup]="modifForm">
+        <div class="card-body">
+  
+          <div class="form-group row mb-4">
+            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3 ">Titre</label>
+            <div class="col-sm-12 col-md-7">
+              <input type="text" name="titre" class="form-control" formControlName="titre">
+            </div> 
+           
+        </div>
+  
+          <div class="form-group row mb-4">
+            <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Date Post </label>
+            <div class="col-sm-12 col-md-7 ">
+              <input type="datetime-local" name="jour" class="form-control" formControlName="jour">
+            </div>
+        </div>
+  
+  
+            <div class="row form-group row mb-4">
+              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Textarea</label>
+              <div class="col-12 col-md-7">
+              <textarea name="textarea-input" name="description" rows="9" placeholder="Content..." class="form-control" formControlName="description"></textarea>
+              </div>
+              </div>
+  
+        </div>
+        <!-- Phone validation end here -->
+        <div class="center">
+        <div class="card-footer">
+            <button class="btn btn-primary pull-right" type="submit" > Modifier </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" routerLink="/admin/listblog">Close</button>
+        </div>
+  
+      </div>
+    </form>
+  </div>
+  
+  
+  
+  
+  

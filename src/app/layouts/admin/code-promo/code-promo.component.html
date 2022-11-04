@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header">
+      <h4>Liste des codes promotionnels des trajets en taxi</h4>
+      <div class="card-header-action">
+          <a routerLink="/admin/codepromo" class="btn btn-primary">Ajouter un nouveau code promo</a>
+      </div>
+  </div>
+  <div class="card-body p-0">
+      <div class="table-responsive">
+          <table class="table table-striped mb-0">
+              <thead>
+                  <tr>
+                      <th>Promo</th>
+                      <th>Type</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let code of promocode">
+                      <td>{{code.promo_code}}</td>
+                      <td>{{code.type_promo}}</td>
+                      <td>{{code.date_expiration}}</td>
+                      <td>{{code.status}}</td>
+                      <td>
+                          <a class="btn btn-primary btn-action mr-1 " data-toggle="tooltip" (click)="modifiercode(code.id)"><i class="fas fa-pencil-alt "></i></a>
+                          <a class="btn btn-danger btn-action" data-toggle="tooltip" (click)="deleteCode(code.id)" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></a>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

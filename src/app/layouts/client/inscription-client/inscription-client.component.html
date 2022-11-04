@@ -1,0 +1,151 @@
+<div class="limiter">
+  <div class="container-login100">
+      <div class="wrap-login100">
+          <div class="text-center">
+              <div class="title">Créer votre compte</div>
+          </div><br>
+          <!-- <form class="login100-form validate-form" #f="ngForm" (ngSubmit)="registerclient(f)"> -->
+              <span class="login100-form-title p-b-26">
+              <img class="mb-4" src="assets/app/img/beebeep.png" alt="" width="70" height="70">
+            </span>
+              <div class="form-group">
+                  <!-- <input type="text" required name="name" required #name="ngModel" ngModel/> -->
+                  <label>Nom</label>
+              </div>
+              <!-- nom validation end here -->
+              <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-feedback">
+                  <div class="lert" *ngIf="name.errors?.['required']">
+                      Veuillez choisir un nom.
+                  </div>
+              </div>
+              <!--END NOM-->
+
+              <div class="form-group">
+                  <!-- <- <input type="text" required name="prenom" required #prenom="ngModel" ngModel/> --> -->
+                  <label>Prenom</label>
+              </div>
+              <!-- nom validation end here -->
+              <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)" class="alert alert-feedback">
+                  <div class="lert" *ngIf="prenom.errors?.['required']">
+                      Veuillez choisir prenom
+                  </div>
+              </div>
+              <!--END prenom-->
+
+
+              <div class="form-group">
+                  <!-- <!-- <input type="text" name="telephone" required #telephone="ngModel" ngModel /> --> -->
+                  <label>Numéro de télèphone</label>
+              </div>
+
+
+              <!-- nom validation end here -->
+              <div *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)" class="alert alert-feedback">
+                <div class="lert" *ngIf="telephone.errors?.['required']">
+                    Veuillez choisir un numéro de télèphone.
+                </div>
+            </div>
+            <!--END num tele-->
+
+              <!-- nom validation end here -->
+              <div class="form-group">
+                  <!-- <!-- <input type="email" name="email" required #email="ngModel" ngModel /> --> -->
+                  <label>E-mail</label>
+              </div>
+              <!-- nom validation end here -->
+              <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-feedback">
+                  <div class="lert" *ngIf="email.errors?.['required']">
+                      Veuillez choisir email
+                  </div>
+              </div>
+              <!--END prenom-->
+
+
+
+            
+              <!--END num tele-->
+              <div class="form-group">
+                  <!-- <!-- <input type="password" name="password" required #password="ngModel" ngModel/> --> -->
+                  <label>Mot de passe</label>
+              </div>
+
+              <!-- nom validation end here -->
+              <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-feedback">
+                  <div class="lert" *ngIf="password.errors?.['required']">
+                      Veuillez choisir le mot de passe.
+                  </div>
+              </div>
+              <!--END NOM-->
+              <div class="form-group">
+                  <!-- <!-- <input type="password" name="password_confirmation" required #password_confirmation="ngModel" ngModel /> --> -->
+                  <label>Confirmer</label>
+              </div>
+              <!-- nom validation end here -->
+              <div *ngIf="password_confirmation.invalid && (password_confirmation.dirty || password_confirmation.touched)" class="alert alert-feedback">
+                  <div class="lert" *ngIf="password_confirmation.errors?.['required']">
+                      Veuillez valider le mot de passe.
+                  </div>
+              </div>
+              <!--END NOM-->
+
+              <div class="alert alert-danger" *ngIf="messageError">
+                  {{messageError}}
+              </div>
+
+              <button type="submit" class="btn">Valider</button>
+              <div class="text-center p-t-115">
+                  <span class="txt1">Vous avez déjà un compte?</span>
+                  <a class="txt2" routerLink="/client/login">Connectez-vous</a>
+              </div>
+          <!-- </form> -->
+      </div>
+  </div>
+</div>
+
+<!--<div class="limiter">
+  <div class="container-login100">
+      <div class="wrap-login100">
+          <div class="text-center">
+              <div class="title">Créer votre compte</div>
+          </div><br>
+          <form class="login100-form validate-form" #f="ngForm" (ngSubmit)="registerclient(f)">
+              <span class="login100-form-title p-b-26">
+              <img class="mb-4" src="assets/app/img/beebeep.png" alt="" width="70" height="70">
+            </span>
+              <div class="form-group">
+                  <input type="text" required/><label>Username</label>
+              </div>
+
+              <div class="form-group">
+                  <input type="password" required/><label>Password</label>
+              </div>
+              <div class="form-group">
+                  <input type="date" required/><label>Password</label>
+              </div>
+
+              <div class="form-row">
+                  <input id="radio1" type="radio" name="youname" checked="checked" />
+                  <label for="radio1">Homme</label>
+                  <input id="radio2" type="radio" name="youname" />
+                  <label for="radio2">Femme</label>
+              </div>
+              <br>
+              <div>
+                  <input type="file" required/>
+              </div>
+
+              <div class="form-group">
+                  <a href="#" class="txt2">
+                Forgot your password?
+               </a></div>
+
+
+              <input type="button" value="Submit" />
+              <div class="text-center p-t-115">
+                  <span class="txt1">Vous avez déjà un compte?</span>
+                  <a class="txt2" href="#">Connectez-vous</a>
+              </div>
+          </form>
+      </div>
+  </div>
+  </div>-->

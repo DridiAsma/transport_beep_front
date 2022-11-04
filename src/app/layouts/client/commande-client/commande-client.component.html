@@ -1,0 +1,215 @@
+<!-- <div class="text-center">
+  <div class="title">
+    <h2>Créer votre commande</h2>
+  </div>
+</div>
+<br><br><br><br>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="ride-box">
+        <div class="row">
+          <div class="user-details">
+            <div class="input-box col-lg-12">
+              <span class="details">Rechercher..</span>
+              <input type="search" [(ngModel)]="placesText" #placesRef="ngx-places" ngx-google-places-autocomplete (onAddressChange)="handleAddressChange($event)">
+            </div>
+          </div>
+
+          <div class="user-details">
+            <br><br>
+            <div class="gender-details">
+              <span for="walk" class="radio-tile-label">Types de véhicules</span>
+              <div class="radio-tile-group">
+
+                <div class="input-container">
+
+                  <input id="walk" class="radio-button" type="radio" value="taxi" name="radio" formControlName="type_vehicules"/>
+                  <div class="radio-tile">
+                    <div class="icon walk-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M352 0C369.7 0 384 14.33 384 32V64L384 64.15C422.6 66.31 456.3 91.49 469.2 128.3L504.4 228.8C527.6 238.4 544 261.3 544 288V480C544 497.7 529.7 512 512 512H480C462.3 512 448 497.7 448 480V432H128V480C128 497.7 113.7 512 96 512H64C46.33 512 32 497.7 32 480V288C32 261.3 48.36 238.4 71.61 228.8L106.8 128.3C119.7 91.49 153.4 66.31 192 64.15L192 64V32C192 14.33 206.3 0 224 0L352 0zM197.4 128C183.8 128 171.7 136.6 167.2 149.4L141.1 224H434.9L408.8 149.4C404.3 136.6 392.2 128 378.6 128H197.4zM128 352C145.7 352 160 337.7 160 320C160 302.3 145.7 288 128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352zM448 288C430.3 288 416 302.3 416 320C416 337.7 430.3 352 448 352C465.7 352 480 337.7 480 320C480 302.3 465.7 288 448 288z"/></svg>
+                    </div>
+                    <label for="walk" class="radio-tile-label">Taxi</label>
+                  </div>
+                </div>
+
+                <div class="input-container">
+                  <input id="drive" class="radio-button" type="radio" value="vtc" formControlName="type_vehicules"  name="radio" />
+                  <div class="radio-tile">
+                    <div class="icon car-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M469.71,234.6c-7.33-9.73-34.56-16.43-46.08-33.94s-20.95-55.43-50.27-70S288,112,256,112s-88,4-117.36,18.63-38.75,52.52-50.27,70S49.62,224.87,42.29,234.6,29.8,305.84,32.94,336s9,48,9,48h86c14.08,0,18.66-5.29,47.46-8C207,373,238,372,256,372s50,1,81.58,4c28.8,2.73,33.53,8,47.46,8h85s5.86-17.84,9-48S477,244.33,469.71,234.6Z" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><rect x="400" y="384" width="56" height="16" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><rect x="56" y="384" width="56" height="16" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M364.47,309.16c-5.91-6.83-25.17-12.53-50.67-16.35S279,288,256.2,288s-33.17,1.64-57.61,4.81-42.79,8.81-50.66,16.35C136.12,320.6,153.42,333.44,167,335c13.16,1.5,39.47.95,89.31.95s76.15.55,89.31-.95C359.18,333.35,375.24,321.4,364.47,309.16Z"/><path d="M431.57,243.05a3.23,3.23,0,0,0-3.1-3c-11.81-.42-23.8.42-45.07,6.69a93.88,93.88,0,0,0-30.08,15.06c-2.28,1.78-1.47,6.59,1.39,7.1A455.32,455.32,0,0,0,407.53,272c10.59,0,21.52-3,23.55-12.44A52.41,52.41,0,0,0,431.57,243.05Z"/><path d="M80.43,243.05a3.23,3.23,0,0,1,3.1-3c11.81-.42,23.8.42,45.07,6.69a93.88,93.88,0,0,1,30.08,15.06c2.28,1.78,1.47,6.59-1.39,7.1A455.32,455.32,0,0,1,104.47,272c-10.59,0-21.52-3-23.55-12.44A52.41,52.41,0,0,1,80.43,243.05Z"/><line x1="432" y1="192" x2="448" y2="192" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="64" y1="192" x2="80" y2="192" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M78,211s46.35-12,178-12,178,12,178,12" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                    </div>
+                    <label for="drive" class="radio-tile-label">VTC</label>
+                  </div>
+                </div>
+
+                <div class="input-container">
+                  <input id="transfert" class="radio-button" value="transfert" type="radio" formControlName="type_vehicules" name="radio" />
+                  <div class="radio-tile">
+                    <div class="icon car-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.57,10.66C20.43,10.26,20.05,10,19.6,10h-7.19c-0.46,0-0.83,0.26-0.98,0.66L10,14.77l0.01,5.51 c0,0.38,0.31,0.72,0.69,0.72h0.62C11.7,21,12,20.62,12,20.24V19h8v1.24c0,0.38,0.31,0.76,0.69,0.76h0.61 c0.38,0,0.69-0.34,0.69-0.72L22,18.91v-4.14L20.57,10.66z M12.41,11h7.19l1.03,3h-9.25L12.41,11z M12,17c-0.55,0-1-0.45-1-1 s0.45-1,1-1s1,0.45,1,1S12.55,17,12,17z M20,17c-0.55,0-1-0.45-1-1s0.45-1,1-1s1,0.45,1,1S20.55,17,20,17z"/><polygon points="14,9 15,9 15,3 7,3 7,8 2,8 2,21 3,21 3,9 8,9 8,4 14,4"/><rect height="2" width="2" x="5" y="11"/><rect height="2" width="2" x="10" y="5"/><rect height="2" width="2" x="5" y="15"/><rect height="2" width="2" x="5" y="19"/></svg>
+                    </div>
+                    <label for="transfert" class="radio-tile-label">Transfert</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br><br>
+            <div class="input-box col-lg-10">
+              <span class="details">Nombre de personne</span>
+              <input type="number" formControlName="nbr_persone">
+            </div>
+            <br><br><br><br><br>
+            <div class="input-box col-lg-10">
+              <span class="details">Date</span>
+              <input type="date" formControlName="duree">
+            </div>
+            <br><br><br><br><br>
+            <div class="input-box col-lg-12">
+              <span class="details">Commantaires</span>
+              <input type="text" placeholder="Text.." formControlName="texts">
+            </div>
+            <br><br><br><br><br>
+            <div class="input-box col-lg-12">
+              <span class="details">Code promo</span>
+              <input type="text" placeholder="0A0.." formControlName="codepromo">
+            </div>
+            <br><br><br><br><br>
+            <div class="input-box col-lg-12">
+              <span class="details">Liste un chauffeur</span>
+              <input type="text" placeholder="Nom Chauffeur.." formControlName="chauffeur_id">
+            </div>
+            <br><br><br><br><br>
+            <div class="input-box col-lg-12">
+              <span class="details">Ajouter un prix</span>
+              <input type="number" placeholder="300D.." formControlName="prixclient">
+            </div>
+            <br><br><br><br><br>
+
+            <div class="input-box">
+              <span class="details">Méthode de paiment</span>
+              <select class="form-control" formControlName="types_paiment"  class="great-input-style form-control">
+                <option value="espaces">Espèces</option>
+                <option value="carte">Cartes</option>
+              </select>
+
+            </div>
+            <br>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="statut">
+              <label class="form-check-label" for="exampleCheck1">Vous confirmez que vous acceptez les conditions.
+
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="col-lg-5">
+     -- <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Distance </span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="distance">
+          <span class="input-group-text">Duree </span>
+        </div>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="time">
+      </div> --
+      <div class="ride-box">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="center">
+              <div class="info-field">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Distance </span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="distance" formControlName="distance">
+                    <span class="input-group-text">Duree </span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="time" formControlName="time">
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br><br>
+          <div class="input-box">
+
+             <div #map id="map-canvas" style="width: 120%; height: 900px; z-index: 0;"> </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button col-lg-3"> <input type="submit" value="Envoyer"> </div>
+</form>
+-->
+<!--
+<div class="_css-bOmAYR"><div class="_css-gPGXbE">
+  <span class="_css-iaaPNY">
+    <div data-baseweb="block" class="_css-dGIvgs _css-lpcwSG">
+      <div class="_css-cJlKPu"><div class="_css-hkTiUJ"></div>
+      <div class="_css-kwSSjt">Choisissez une course</div>
+      <div data-baseweb="progress-bar" role="progressbar" aria-label="0% Loaded" aria-valuenow="0" aria-valuemin="0" aria-valuemax="1" class="_css-eTGlwZ">
+        <div class="_css-kVgTuL"><div class="_css-gzZUNf">
+          <div class="_css-hxvYko"></div></div>
+        </div></div></div><div data-baseweb="block" class="_css-kTVVFL">
+          <div data-baseweb="block" class="_css-gsDUyp"><div data-inputkey="pickup">
+            <div data-baseweb="input" class="_css-jYxVpk"><div class="_css-gaVwcN">
+              <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none"><title>Circle small</title>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 14a2 2 0 100-4 2 2 0 000 4zm5-2a5 5 0 11-10 0 5 5 0 0110 0z" fill="currentColor"></path></svg></div><div data-baseweb="base-input" class="_css-TOJTm"><input aria-invalid="false" aria-required="false" autocomplete="on" inputmode="text" name="" placeholder="Spécifiez un lieu de prise en charge" type="text" data-inputkey="pickup" class="_css-kzEJmN" value="50 Oak St"></div></div></div><div data-baseweb="block" class="_css-tEvHm"></div><div data-inputkey="drop"><div data-baseweb="input" class="_css-jYxVpk"><div class="_css-gaVwcN">
+                  <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none"><title>Square small</title>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10h-4v4h4v-4zM7 7v10h10V7H7z" fill="currentColor">
+
+                    </path></svg></div><div data-baseweb="base-input" class="_css-TOJTm">
+                      <input aria-invalid="false" aria-required="false" autocomplete="on" inputmode="text" name="" placeholder="Saisissez votre destination" type="text" data-inputkey="drop" class="_css-kzEJmN" value="jetée 39"></div></div>
+                    </div><div data-baseweb="block" class="_css-mJBdK"></div></div>
+                    <div data-baseweb="block" class="_css-dFEsMs">
+                      <button data-baseweb="button" data-tracking-name="date_time_button" localecode="en_US" class="_css-ikDCqS">
+                        <div class="_css-giUpLf"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                          <title>Clock arrow right</title>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8 13.9c-.9-.6-2.1-.9-3.3-.9-3.6 0-6.5 2.9-6.5 6.5 0 1.2.3 2.3.9 3.3-.6.1-1.2.2-1.9.2-6.1 0-11-4.9-11-11S5.9 1 12 1s11 4.9 11 11c0 .6-.1 1.3-.2 1.9zM8.2 15.3l5.8-2.9h.1V4h-3v6.5l-4.2 2.1 1.3 2.7zm8.7-.3h3.7l3.3 4.5-3.3 4.5h-3.7l2.1-3h-4v-3h4l-2.1-3z" fill="currentColor"></path></svg></div>sept. 12, 01:10 AM<div class="_css-ePcHmM"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none"><title>Chevron down small</title><path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="currentColor"></path></svg></div></button></div></div><div class="_css-hWGanL"><div data-baseweb="block" class="_css-iVeGcw"><div class="_css-itfoni" data-tracking-name="select_product" data-tracking-payload="{&quot;vvid&quot;:&quot;8&quot;}" data-vvid="8"><div class="_css-efygEQ"><img height="88" width="88" src="https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/UberX_v1.png"></div><div data-baseweb="block" class="_css-gafyHE _css-lpcwSG"><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><div data-baseweb="block" class="_css-epWFXj _css-euhGa-D _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-euhGa-D _css-dZTBoz">UberX</div></div><div data-baseweb="block" class="_css-epWFXj _css-cshipr _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-dZTBoz">39,18&nbsp;$US</div></div></div><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-euhGa-D _css-lnLvkz">Des courses abordables, rien que pour vous</p><p data-baseweb="typo-paragraphsmall" class="_css-cshipr _css-jsRqg _css-lcvSVT"></p></div><div data-baseweb="block" class="_css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-lcvSVT"></p></div></div></div><div class="_css-itfoni" data-tracking-name="select_product" data-tracking-payload="{&quot;vvid&quot;:&quot;942&quot;}" data-vvid="942"><div class="_css-efygEQ"><img height="88" width="88" src="https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/package_UberXL_new_2022.png"></div><div data-baseweb="block" class="_css-gafyHE _css-lpcwSG"><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><div data-baseweb="block" class="_css-epWFXj _css-euhGa-D _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-euhGa-D _css-dZTBoz">UberXL</div></div><div data-baseweb="block" class="_css-epWFXj _css-cshipr _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-dZTBoz">46,41&nbsp;$US</div></div></div><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-euhGa-D _css-lnLvkz">Des courses abordables pour des groupes jusqu'à 6&nbsp;personnes</p><p data-baseweb="typo-paragraphsmall" class="_css-cshipr _css-jsRqg _css-lcvSVT"></p></div><div data-baseweb="block" class="_css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-lcvSVT"></p></div></div></div><div class="_css-itfoni" data-tracking-name="select_product" data-tracking-payload="{&quot;vvid&quot;:&quot;20017885&quot;}" data-vvid="20017885"><div class="_css-efygEQ"><img height="88" width="88" src="https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/package_UberComfort_new_2022.png"></div><div data-baseweb="block" class="_css-gafyHE _css-lpcwSG"><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><div data-baseweb="block" class="_css-epWFXj _css-euhGa-D _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-euhGa-D _css-dZTBoz">Comfort</div></div><div data-baseweb="block" class="_css-epWFXj _css-cshipr _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-dZTBoz">48,47&nbsp;$US</div></div></div><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-euhGa-D _css-lnLvkz">Véhicules spacieux et chauffeurs les mieux notés</p><p data-baseweb="typo-paragraphsmall" class="_css-cshipr _css-jsRqg _css-lcvSVT"></p></div><div data-baseweb="block" class="_css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-lcvSVT"></p></div></div></div><div class="_css-itfoni" data-tracking-name="select_product" data-tracking-payload="{&quot;vvid&quot;:&quot;20041963&quot;}" data-vvid="20041963"><div class="_css-efygEQ"><img height="88" width="88" src="https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/UberComfort_Electric_Gold.png"></div><div data-baseweb="block" class="_css-gafyHE _css-lpcwSG"><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><div data-baseweb="block" class="_css-epWFXj _css-euhGa-D _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-euhGa-D _css-dZTBoz">Électrique Confort</div></div><div data-baseweb="block" class="_css-epWFXj _css-cshipr _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-dZTBoz">48,47&nbsp;$US</div></div></div><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-euhGa-D _css-lnLvkz">Des voitures haut de gamme à zéro émission</p><p data-baseweb="typo-paragraphsmall" class="_css-cshipr _css-jsRqg _css-lcvSVT"></p></div><div data-baseweb="block" class="_css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-lcvSVT"></p></div></div></div><div class="_css-itfoni" data-tracking-name="select_product" data-tracking-payload="{&quot;vvid&quot;:&quot;1&quot;}" data-vvid="1"><div class="_css-efygEQ"><img height="88" width="88" src="https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/Black_v1.png"></div><div data-baseweb="block" class="_css-gafyHE _css-lpcwSG"><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><div data-baseweb="block" class="_css-epWFXj _css-euhGa-D _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-euhGa-D _css-dZTBoz">Black</div></div><div data-baseweb="block" class="_css-epWFXj _css-cshipr _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-dZTBoz">88,85&nbsp;$US</div></div></div><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-euhGa-D _css-lnLvkz">Véhicules et service haut de gamme</p><p data-baseweb="typo-paragraphsmall" class="_css-cshipr _css-jsRqg _css-lcvSVT"></p></div><div data-baseweb="block" class="_css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-lcvSVT"></p></div></div></div><div class="_css-dpvaOn" data-tracking-name="select_product" data-tracking-payload="{&quot;vvid&quot;:&quot;2&quot;}" data-vvid="2"><div class="_css-efygEQ"><img height="88" width="88" src="https://d1a3f4spazzrp4.cloudfront.net/car-types/haloProductImages/v1.1/BlackSUV_v1.png"></div><div data-baseweb="block" class="_css-gafyHE _css-lpcwSG"><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><div data-baseweb="block" class="_css-epWFXj _css-euhGa-D _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-euhGa-D _css-dZTBoz">Black SUV</div><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" class="_css-epfsyy _css-eDSBFD"><title>Person multiple</title><g fill="currentColor"><path d="M12 5.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM23 5.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM1 17v6h9V12H6c-2.8 0-5 2.2-5 5zM12 23v-6c0-2.8 2.2-5 5-5h6v11H12z"></path></g></svg><p data-baseweb="typo-paragraphsmall" class="_css-lnLvkz">6</p></div><div data-baseweb="block" class="_css-epWFXj _css-cshipr _css-ckOzdo"><div data-baseweb="typo-labellarge" class="_css-dZTBoz">103,85&nbsp;$US</div></div></div><div data-baseweb="block" class="_css-euhGa-D _css-jvicEt _css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-euhGa-D _css-lnLvkz">Des courses de luxe effectuées par les chauffeurs les mieux notés et les plus expérimentés, et pouvant accueillir jusqu'à [6]&nbsp;personnes</p><p data-baseweb="typo-paragraphsmall" class="_css-cshipr _css-jsRqg _css-lcvSVT"></p></div><div data-baseweb="block" class="_css-ckOzdo"><p data-baseweb="typo-paragraphsmall" class="_css-lcvSVT"></p></div></div></div></div></div><div class="_css-irSXeH"><div data-baseweb="block" data-tracking-name="change_payment_method" class="_css-izVgRD"><div data-baseweb="block" class="_css-iOVbDc"><img alt="payment-method" class="_css-gKVFvh" src="https://tb-static.uber.com/prod/wallet/icons/stored_value_3x.png"><div data-baseweb="typo-labelsmall" class="_css-hvCmyE">Uber&nbsp;Cash • Profil personnel</div>
+                        </div><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                          <title>Chevron right small</title>
+                          <path d="M16.9 12l-4.6 6H8.5l4.6-6-4.6-6h3.8l4.6 6z" fill="currentColor"></path>
+                        </svg></div>
+                        <button data-baseweb="button" data-tracking-name="request_pickup_button" class="_css-lajzqQ">Planifier Berline (Black) SUV</button></div></div></span></div></div> -->
+
+
+
+
+
+                        <div class="app-page">
+                          <div #map id="map-canvas"></div>
+                          <div class="map-loader-container">
+                              <div class="map-loader"></div>
+                          </div>
+                           <!-- Customers Card -->
+            <div class="col-xxl-4 col-md-4">
+
+              <div class="card info-card customers-card">
+
+                <div class="card-body">
+                  <h1>Demande</h1>
+                  <div class="d-flex align-items-center">
+             
+                      <div class="input-box col-lg-12">
+                        <span class="details">Rechercher..</span>
+                        <input type="search" [(ngModel)]="placesText" #placesRef="ngx-places" ngx-google-places-autocomplete (onAddressChange)="handleAddressChange($event)">
+                      </div>
+                      <br><br><br><br><br>
+                      <!-- <div class="input-box col-lg-10">
+                        <span class="details">Nombre de personne</span>
+                        <input type="number">
+                      </div> -->
+                    </div>
+                  
+             
+
+                </div>
+              </div>
+
+            </div><!-- End Customers Card -->
+     </div>
+     

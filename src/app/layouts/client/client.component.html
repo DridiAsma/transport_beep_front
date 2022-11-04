@@ -1,0 +1,8 @@
+<app-splash-screen></app-splash-screen>
+<app-sidenav-client (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav-client>
+ <app-header-client
+[collapsed]="isSideNavCollapsed"
+[screenWidth]="screenWidth"></app-header-client>
+<app-body-client
+[collapsed]="isSideNavCollapsed"
+[screenWidth]="screenWidth"></app-body-client>

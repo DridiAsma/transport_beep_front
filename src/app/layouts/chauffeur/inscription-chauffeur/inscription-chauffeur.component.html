@@ -1,0 +1,315 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="text-center">
+        <span class="login100-form-title p-b-26">
+          <img class="mb-4" src="assets/app/img/beebeep.png" alt="" width="90" height="100">
+        </span>
+        <div class="title">Inscrivez-vous comme Chaouffeur.</div>
+      </div><br><br/>
+
+      <div class="content">
+        <form  (ngSubmit)="submit()"  [formGroup]="inscritchaufForm" class="login100-form validate-form">
+
+<h2>Informations personnelles</h2>
+
+         <div class="user-details">
+            <div class="input-box">
+
+              <input type="text" placeholder="Nom" formControlName="nom" />
+            </div>
+            <div class="input-box">
+
+              <input type="text" placeholder="Prénom" formControlName="prenom"/>
+            </div>
+
+            <div class="input-box">
+              <input type="tel" name="tele" placeholder="Télèphone" formControlName="tele"/>
+            </div>
+
+            <div class="input-box">
+              <!-- <span class="details">E-mail</span> -->
+              <input type="text" placeholder="E-mail.." name="email" formControlName="email" />
+            </div>
+            <div class="input-box">
+              <input type="text" placeholder="Adresse.." name="emplacement" formControlName="emplacement"/>
+            </div>
+
+            <div class="input-box">
+
+              <input type="password" placeholder="Mot de passe" name="password" formControlName="password"/>
+            </div>
+         </div>
+
+
+         <div class="gender-details">
+            <input id="dot-1" type="radio" value="homme" formControlName="gendre"/>
+            <input id="dot-2" type="radio" value="femme" name="gendre" formControlName="gendre" />
+            <span class="gender-title">Gender</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Homme</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Femme</span>
+              </label>
+            </div>
+          </div>
+         <br/>
+     <hr/>
+     <br/><br/>
+         <h2>Information de vehicule</h2>
+          <div class="user-details">
+
+            <div class="input-box">
+              <!-- <span class="details">Marque</span> -->
+              <input type="text" placeholder="Nom du constructeur" name="marque" formControlName="marque"/>
+            </div>
+
+            <div class="input-box">
+              <!-- <span class="details">Modél</span> -->
+              <input type="text" placeholder="Modèle du véhicule" name="model" formControlName="model" />
+
+            </div>
+
+            <div class="input-box">
+              <!-- <span class="details">N°place</span> -->
+              <input type="number" placeholder="Number place" name="nbr_place" formControlName="nbr_place" />
+
+            </div>
+
+              <div class="input-box">
+              <!-- <span class="details">Couleur</span> -->
+              <select  formControlName="colour" class="great-input-style form-control" name="colour">
+                <option value="">Couleur du véhicule </option>
+                 <option value="rouge">Rouge</option>
+                 <option value="noir">Noir</option>
+                 <option value="blance">Blanche</option>
+                 <option value="blue">Bleue</option>
+                 <option value="grey">Grey</option>
+                 <option value="jeune">Jeune</option>
+             </select>
+
+            </div>
+
+              <div class="input-box">
+                 <select class="great-input-style form-control"  name="annee" formControlName="annee">
+                  <option value="">Année du véhicule</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2007">2007</option>
+                                      </select>
+
+              </div>
+
+            <div class="input-box">
+
+              <select  class="great-input-style form-control" formControlName="types_paiment" name="types_paiment">
+                <option value="">Type de facturation</option>
+                 <option value="espaces">Espace</option>
+                 <option value="carte">Chaque</option>
+
+             </select>
+            </div>
+
+            <div class="input-box">
+              <input type="text" placeholder="Plaque d'immatriculation" name="num_serie" formControlName="num_serie"/>
+
+            </div>
+
+
+
+
+
+
+            <div class="input-box">
+              <!-- <span class="details">Montant</span> -->
+              <input type="number" placeholder="Montant -DT" name="cout_km" formControlName="cout_km" />
+
+            </div>
+
+
+          </div>
+          <div class="gender-details">
+
+            <input id="taxi" type="radio" value="Taxi" name="type_vehicules" formControlName="type_vehicules" />
+            <input id="vtc" type="radio" value="vtc" name="type_vehicules" formControlName="type_vehicules" />
+            <input id="transfert" type="radio" value="transfert" formControlName="type_vehicules"  />
+            <span class="gender-title">Type de Véhicule</span>
+
+            <div class="category">
+              <label for="taxi">
+                <span class="dot one"></span>
+                <span class="gender">Taxi</span>
+              </label>
+              <label for="vtc">
+                <span class="dot two"></span>
+                <span class="gender">VTC</span>
+              </label>
+              <label for="transfert">
+                <span class="dot three"></span>
+                <span class="gender">Transfert</span>
+              </label>
+            </div>
+          </div>
+<br>
+<hr>
+
+          <h2>Identité et date de carte</h2><br>
+
+          <div class="user-details">
+
+            <div class="input-box">
+              <span class="details">Numéro de Cin</span>
+              <input type="number" placeholder="00012345" name="cinNum" formControlName="cinNum" />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Expire le</span>
+              <input type="date" name="dateCin" formControlName="dateCin" />
+
+            </div>
+
+            <div class="input-box">
+              <span class="details">Numéro de permis</span>
+              <input type="text" placeholder="Idetifier number" name="numPermis" formControlName="numPermis"/>
+
+            </div>
+
+
+            <div class="input-box">
+              <span class="details">Expire le</span>
+              <input type="date" placeholder="Date.." name="permidate" formControlName="permidate" />
+            </div>
+
+
+            <div class="input-box">
+              <span class="details"> Numéro de Assurance</span>
+              <input type="number" placeholder="Identification Number.." name="numAss" formControlName="numAss"/>
+            </div>
+
+
+
+            <div class="input-box">
+              <span class="details">Expire le</span>
+              <input type="date"  name="dateAss" formControlName="dateAss"/>
+            </div>
+
+            <div class="input-box">
+              <span class="details">Numéro de Badge</span>
+              <input type="number"  name="numBadg" formControlName="numBadg" />
+            </div>
+
+
+            <div class="input-box">
+              <span class="details">Expire le</span>
+              <input type="date" placeholder="date" name="dateBadg" formControlName="dateBadg" />
+            </div>
+
+
+
+
+
+            <div class="input-box">
+              <span class="details">Numéro de Carte Circulation</span>
+              <input type="number" placeholder="N°de carte criss" name="numCartCir" formControlName="numCartCir" />
+            </div>
+
+
+            <div class="input-box">
+              <span class="details">Expire le</span>
+              <input type="date"  name="dateCartCir" formControlName="dateCartCir" />
+            </div>
+
+
+          </div>
+          <br/>
+          <hr/>
+          <br/><br/>
+              <h2>Télécharger les documents</h2>
+          <div class="user-details">
+
+            <div class="col-md-6">
+              <div class="form-group files color">
+                <span class="details">Carte d'Identité Nationale</span>
+                <!-- <input type="file" class="form-control" multiple=""> -->
+                <input type="file" (change)= "UploadImageCin($event)" name="imageCin" formControlName="imageCin"/>
+              </div>
+            </div>
+
+
+            <div class="col-md-6">
+              <div class="form-group files color">
+                <span class="details">Permis de conduire</span>
+                <!-- <input type="file" class="form-control" multiple=""> -->
+                <input type="file" (change)= "UploadImagePermis($event)" name="imagePermis" formControlName="imagePermis" />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group files color">
+                <span class="details">Badge</span>
+                <!-- <input type="file" class="form-control" multiple=""> -->
+                <input type="file"  (change)= "UploadImageBadg($event)" name="imageBadg" formControlName="imageBadg" />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group files color">
+                <span class="details">Assurance</span>
+                <!-- <input type="file" class="form-control" multiple=""> -->
+                <input type="file" (change)= "UploadImageAss($event)" name="imageAss" formControlName="imageAss"/>
+              </div>
+            </div>
+
+
+
+            <div class="col-md-6">
+              <div class="form-group files color">
+                <span class="details">Carte Circulation</span>
+                <!-- <input type="file" class="form-control" multiple=""> -->
+                <input type="file" name="imageCartCir" (change)= "UploadImageCart($event)" formControlName="imageCartCir" />
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="input-box">
+          <label>
+            <input type="checkbox" placeholder="Statut" name="statut" formControlName="statut"/>
+               En t'inscrivant, tu confirmes que tu acceptes les conditions générales et notre
+              politique de confidentialité.
+
+
+          </label>
+          </div>
+          <div class="button"> <input type="submit" value="Register"></div>
+    </form>
+        <div class="text-center p-t-115">
+          <span class="txt1">Vous avez déjà un compte?</span>
+          <a class="txt2" routerLink="/chauffeur/login">Connectez-vous</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

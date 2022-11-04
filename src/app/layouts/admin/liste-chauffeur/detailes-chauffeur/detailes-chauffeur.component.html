@@ -1,0 +1,150 @@
+
+<div class="container bootstrap snippets bootdey" *ngFor="let chauffeur of chauffeurs">
+  <div class="row">
+    <div class="profile-nav col-md-3">
+        <div class="panel">
+            <div class="user-heading round">
+                <a href="#">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM4TfipskFLoycix3JSNW7DbUIkzdJoNsk6m4XpVtEunqZGil1nwWeZlhsBzbUqF_AdA0&usqp=CAU" alt="">
+                </a>
+                <h1>{{chauffeur.nom}} {{chauffeur.prenom}}</h1>
+                <p>{{chauffeur.email}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="profile-info col-md-9">
+
+        <div class="panel">
+            <div class="bio-graph-heading">
+               Compte Chauffeur
+            </div>
+            <div class="panel-body bio-graph-info">
+                
+                <div class="row">
+                    <div class="bio-row">
+                        <p><span>Nom </span>: {{chauffeur.nom}}  </p>
+                    </div>
+                    <div class="bio-row">
+                        <p><span>Prénom </span>: {{chauffeur.prenom}} </p>
+                    </div>
+                   <div class="bio-row">
+                        <p><span>Téléphone </span>: {{chauffeur.tele}}</p>
+                    </div>
+                    <div class="bio-row">
+                        <p><span>Gendre</span>: {{chauffeur.gendre}} </p>
+                    </div>
+                    <div class="bio-row">
+                        <p><span>Adresse </span>: {{chauffeur.emplacement}} </p>
+                    </div>
+                    <div class="bio-row">
+                        <p><span>Email </span>: {{chauffeur.email}}</p>
+                    </div>
+                    <div class="bio-row">
+                        <p><span>Numéro de véhicule </span>: {{chauffeur.num_serie}}</p>
+                    </div>
+                    <div class="bio-row">
+                        <p><span>N° place </span>: {{chauffeur.nbr_place}}</p>
+                    </div>
+
+                    <div class="bio-row">
+                      <p><span>Prix </span>: {{chauffeur.cout_km}}</p>
+                   </div>
+
+                  <div class="bio-row">
+                    <p><span>Statut </span>: {{chauffeur.statut}}</p>
+                </div>
+                <div class="bio-row">
+                  <p><span>Type de paiement </span>: {{chauffeur.types_paiment}}</p>
+               </div>
+               <div class="bio-row">
+                <p><span>Type de véhicule</span>: {{chauffeur.type_vehicules}}</p>
+              </div>
+              <div class="bio-row">
+                <p><span>L'année modèle du véhicule </span>: {{chauffeur.annee}}</p>
+              </div>
+              <div class="bio-row">
+                <p><span>Couleur de véhicule </span>: {{chauffeur.colour}}</p>
+              </div>
+              <div class="bio-row">
+                <p><span>Modèle de véhicule </span>: {{chauffeur.model}}</p>
+              </div>
+              <div class="bio-row">
+                <p><span>Marque de véhicule</span>: {{chauffeur.marque}}</p>
+              </div>
+              
+             </div>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+              <h1>Liste des documents</h1>
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-body">
+                           
+                            <div class="bio-desk">
+                                <h4 class="red">Carte Cin </h4>
+                                <p>Numéro de carte : {{chauffeur.cinNum}}</p>
+                                <p>Image : <img class="card-img-top img-responsive" src="{{imageDirectoryPath}}{{chauffeur.imageCartCir}}" style="height:50px; width:80px" alt=""></p>
+                                <p>Date : {{chauffeur.dateCin}}</p>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="bio-desk">
+                                <h4 class="terques">Permis </h4>
+                                <p>Numéro de carte : {{chauffeur.numPermis}}</p>
+                                <p>Date : {{chauffeur.permidate}}</p>
+                                <p>Image : <img class="card-img-top img-responsive" src="{{imageDirectoryPath}}{{chauffeur.imagePermis}}" style="height:50px; width:80px" alt=""></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="bio-desk">
+                                <h4 class="green">Badge Taxi</h4>
+                                <p>Numéro de carte : {{chauffeur.numBadg}}</p>
+                                <p>Date : {{chauffeur.dateBadg}}</p>
+                                <p>Image : <img class="card-img-top img-responsive" src="{{imageDirectoryPath}}{{chauffeur.imagePermis}}" style="height:50px; width:80px" alt=""></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="bio-desk">
+                                <h4 class="purple">Assurance</h4>
+                                <p>Numéro de carte : {{chauffeur.numAss}}</p>
+                                <p>Date : {{chauffeur.dateAss}}</p>
+                                <p>Image : <img class="card-img-top img-responsive" src="{{imageDirectoryPath}}{{chauffeur.imageAss}}" style="height:50px; width:80px" alt=""></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="bio-desk">
+                              <h4 class="red">Carte Circulation </h4>
+                              <p>Numéro de carte : {{chauffeur.numCartCir}}</p>
+                              <p>Date : {{chauffeur.dateCartCir}} </p>
+                              <p>Image : <img class="card-img-top img-responsive" src="{{imageDirectoryPath}}{{chauffeur.imageCartCir}}" style="height:50px; width:80px" alt=""></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  
+  </div>
+</div>
+
+
+

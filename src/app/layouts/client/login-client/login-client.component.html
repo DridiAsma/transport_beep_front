@@ -1,0 +1,50 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="text-center">
+        <div class="title">Se Connecter</div>
+      </div><br>
+      <form #f="ngForm" (ngSubmit)="loginclient(f)" class="login100-form validate-form">
+        <span class="login100-form-title p-b-26">
+          <img class="mb-4" src="assets/app/img/beebeep.png" alt="" width="70" height="70">
+        </span>
+        <div class="form-group">
+          <input type="text" name="email" required #email="ngModel" ngModel />
+          <label>E-mail</label>
+        </div>
+        <!-- nom validation end here -->
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-feedback">
+          <div class="lert" *ngIf="email.errors?.['required']">
+            Veuillez choisir adresse email
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="password" name="password" required #password="ngModel" ngModel />
+          <label>Mot de passe</label>
+        </div>
+        <!-- nom validation end here -->
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-feedback">
+          <div class="lert" *ngIf="password.errors?.['required']">
+            Veuillez choisir le mot de passe.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <a routerLink="/client/forget-MotPass" class="txt2">Mot de passe oublié?</a>
+        </div>
+
+        <div class="lert" *ngIf=" messageAuthError">
+              {{ messageAuthError}}
+      </div>
+
+        <button type="submit" class="btn">Connexion</button>
+
+        <div class="text-center p-t-115">
+          <span class="txt1">Vous n'avez pas encore de compte?</span>
+          <a class="txt2" routerLink="/client/inscription">Inscrivez-vous</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

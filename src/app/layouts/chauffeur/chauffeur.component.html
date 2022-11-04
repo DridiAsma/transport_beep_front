@@ -1,0 +1,8 @@
+<app-splash-screen></app-splash-screen>
+<app-sidenav-chauffeur (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav-chauffeur>
+<app-header
+[collapsed]="isSideNavCollapsed"
+[screenWidth]="screenWidth"></app-header>
+<app-body
+[collapsed]="isSideNavCollapsed"
+[screenWidth]="screenWidth"></app-body>
