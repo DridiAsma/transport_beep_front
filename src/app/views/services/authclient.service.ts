@@ -25,6 +25,34 @@ export class AuthclientService {
 
   //   }
 
+
+LoggedIn(){
+    let token:any=localStorage.getItem('token')
+
+    if(!token){
+     return false
+    }
+    let decodeToken=this.helper.decodeToken(token)
+
+
+
+     if(decodeToken.user){
+       return false
+     }
+
+     if(this.helper.isTokenExpired(token)){
+       return false
+     }
+
+    return true
+  }
+
+
+
+
+
+
+
   register(data:any){
     return this.http.post('http://127.0.0.1:8000/api/client/register',data);
   }

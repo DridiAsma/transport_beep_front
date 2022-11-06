@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthadminService } from 'src/app/views/services/authadmin.service';
+import { AuthAdminService } from 'src/app/views/services/auth-admin.service';
+
 
 @Component({
   selector: 'app-login-admin',
@@ -14,7 +15,7 @@ export class LoginAdminComponent implements OnInit {
   url: any;
   messageAuthError: any
 
-  constructor(private ads: AuthadminService,
+   constructor(private ads: AuthAdminService,
     private route: Router,
     private arouter: ActivatedRoute) {
 
@@ -34,9 +35,9 @@ export class LoginAdminComponent implements OnInit {
 
   loginadmin(f: any) {
     let data = f.value
-    this.ads.login(data).subscribe(response => {
+    this.ads.login(data).subscribe((response: any) => {
       this.dataReceived = response
-      // this.ads.saveData(this.dataReceived.access_token)
+      
       localStorage.setItem('access_token', this.dataReceived.access_token);
       localStorage.setItem('email', this.dataReceived.user.email);
       localStorage.setItem('name', this.dataReceived.user.name);

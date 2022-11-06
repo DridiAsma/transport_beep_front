@@ -14,10 +14,6 @@ import { PaiementService } from 'src/app/views/services/paiement.service';
 })
 export class CommandeClientComponent implements OnInit {
 
-  // constructor() { }
-
-  // ngOnInit(): void {
-  // }
 
   public form!: FormGroup;
   commandes: any;
@@ -56,12 +52,25 @@ export class CommandeClientComponent implements OnInit {
   destinationPin!: google.maps.Marker;
   sourcePin!: google.maps.Marker;
 
-
+  name: any ="";
+  email:  any ="";
+  isLogged:boolean=false;
+  
  constructor(private ngZone: NgZone,
   private formBuilder: FormBuilder,
   private addService: PaiementService,
   private  toastr: ToastrService,
- ){}
+ ){
+
+  if(localStorage.getItem("token")){
+    this.name=localStorage.getItem("name");
+    this.email=localStorage.getItem("email");
+  }else{
+    this.isLogged = false;
+  }
+
+
+ }
 
   ngOnInit(): void {
 
@@ -71,7 +80,6 @@ export class CommandeClientComponent implements OnInit {
       map: null!,
       suppressMarkers: true
   });
-
 
 
 

@@ -5,6 +5,7 @@ import { ControllerAdminComponent } from './controller-admin/controller-admin.co
 import { ControllerChauffeurComponent } from './controller-chauffeur/controller-chauffeur.component';
 import { ConsulterClientComponent } from './controller-admin/consulter-client/consulter-client.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForntPageComponent } from './fornt-page/fornt-page.component';
 
 
 
@@ -12,7 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     ControllerAdminComponent,
     ControllerChauffeurComponent,
-    ConsulterClientComponent
+    ConsulterClientComponent,
+    ForntPageComponent
   ],
   imports: [
     // BrowserModule,

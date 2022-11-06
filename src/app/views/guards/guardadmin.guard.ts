@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthadminService } from '../services/authadmin.service';
+import { AuthAdminService } from '../services/auth-admin.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,8 @@ import { AuthadminService } from '../services/authadmin.service';
 export class GuardadminGuard implements CanActivate {
 
 
-  constructor(private ads:AuthadminService,private router:Router){
+  constructor(private ads: AuthAdminService,
+    private router:Router){
   }
 
   canActivate(route: ActivatedRouteSnapshot,state: RouterStateSnapshot):

@@ -23,11 +23,35 @@ import { RestPasswordComponent } from './layouts/client/rest-password/rest-passw
 import { SplashScreenComponent } from './layouts/splash-screen/splash-screen.component';
 import { ControllerChauffeurComponent } from './views/controller-chauffeur/controller-chauffeur.component';
 import { GuardadminGuard } from './views/guards/guardadmin.guard';
+import { GuradclientGuard } from './views/guards/guradclient.guard';
 
 
 const routes: Routes = [
-  {
 
+ //front
+ {
+  // path: '', component: FrontLayoutComponent,
+  // children: [
+  //   { path: '', loadChildren: () => import('./views/front/home/home.module').then(m => m.HomeModule) },
+  //   { path: 'blog', loadChildren: () => import('./views/front/blog/blog.module').then(m => m.BlogModule) },
+  //   { path: 'notifi', loadChildren: () => import('./views/front/notifi/notifi.module').then(m => m.NotifiModule) },
+  //   { path: 'contact', loadChildren: () => import('./views/front/contact/contact.module').then(m => m.ContactModule) },
+  //   { path: 'reservation', loadChildren: () => import('./views/front/reservation/reservation.module').then(m => m.ReservationModule) },
+  // ]
+ },
+
+
+
+
+
+
+
+  //admin
+
+  {path: '', component: SplashScreenComponent},
+  {path:'admin/login', component: LoginAdminComponent},
+
+  {
   path: 'admin', component: AdminComponent, canActivate: [GuardadminGuard],
   children: [
     { path: 'dashboard', component: DashboardComponent},
@@ -46,17 +70,11 @@ const routes: Routes = [
   ]
 },
 
- {path:'login', component: LoginAdminComponent},
- {path: '', component: SplashScreenComponent},
 
-  
-  {path:'registerclient', component: InscriptionClientComponent},
-  {path:'loginclient', component: LoginClientComponent},
-  { path: 'password-reset', component: RestPasswordComponent},
-  { path: 'forget-MotPass', component: ForgetPasswordComponent},
+//chauffeur
 
-  {path:'loginchauffeur', component: LoginChauffeurComponent},
-  {path:'inscrtchauffeur', component: InscriptionChauffeurComponent},
+  {path:'chauffeur/login', component: LoginChauffeurComponent},
+  {path:'chauffeur/register', component: InscriptionChauffeurComponent},
   {
     path: 'chauffeur', component: ChauffeurComponent,
     children: [
@@ -73,16 +91,20 @@ const routes: Routes = [
     ]
   },
 
-  {
+//client
+  {path:'client/inscription', component: InscriptionClientComponent},
+  {path:'client/login', component: LoginClientComponent},
+  { path:'client/response-password-reset', component: RestPasswordComponent},
+  { path:'client/forget-MotPass', component: ForgetPasswordComponent},
 
-    path: 'client', component: ClientComponent,
+  {
+    path: 'client', component: ClientComponent, canActivate:[GuradclientGuard],
     children: [
       { path: 'commandes', component: CommandeClientComponent },
       { path: 'historique', component: ContactComponent},
       { path: 'message', component: ContactComponent},
-      // { path: 'chauffeur',
-      //     loadChildren: () => import('./layouts/admin/liste-chauffeur/liste-chauffeur.module').then(m => m.ListeChauffeurModule)
-      // },
+      { path: '', component: ContactComponent},
+    
 
 
     ]

@@ -1,6 +1,7 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthadminService } from 'src/app/views/services/authadmin.service';
+import { AuthAdminService } from 'src/app/views/services/auth-admin.service';
+
 import { languages, notifications, userItems } from './header-dummy-data';
 
 @Component({
@@ -54,7 +55,7 @@ export class HeaderComponent implements OnInit {
   }
 
 
-  constructor(private ads:AuthadminService, 
+  constructor(private ads: AuthAdminService, 
     private route:Router) { }
 
   logout(){

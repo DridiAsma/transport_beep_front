@@ -37,9 +37,9 @@
     "ngx-google-places-autocomplete": "^2.0.5",
     "ngx-toastr": "^15.2.1",
     "rxjs": "~7.5.0",
-    "socket.io-client": "^4.5.3",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "ngx-print": "^1.2.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.1",

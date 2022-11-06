@@ -1,7 +1,8 @@
 import { animate, keyframes, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthadminService } from 'src/app/views/services/authadmin.service';
+import { AuthAdminService } from 'src/app/views/services/auth-admin.service';
+
 import { fadeInOut, INavbarData } from './helper';
 import { navbarData } from './nav-data';
 
@@ -71,7 +72,7 @@ export class SidnavComponent implements OnInit {
   }
 
   constructor(public router: Router,
-    private ads:AuthadminService) { }
+    private ads: AuthAdminService) { }
 
   getActiveClass(data: INavbarData): string{
     return this.router.url.includes(data.routeLink) ? 'active' : '';

@@ -4,12 +4,12 @@
           <div class="text-center">
               <div class="title">Créer votre compte</div>
           </div><br>
-          <!-- <form class="login100-form validate-form" #f="ngForm" (ngSubmit)="registerclient(f)"> -->
+          <form class="login100-form validate-form">
               <span class="login100-form-title p-b-26">
               <img class="mb-4" src="assets/app/img/beebeep.png" alt="" width="70" height="70">
             </span>
               <div class="form-group">
-                  <!-- <input type="text" required name="name" required #name="ngModel" ngModel/> -->
+                  <input type="text" required name="name" required>
                   <label>Nom</label>
               </div>
               <!-- nom validation end here -->
@@ -21,7 +21,7 @@
               <!--END NOM-->
 
               <div class="form-group">
-                  <!-- <- <input type="text" required name="prenom" required #prenom="ngModel" ngModel/> --> -->
+                  <input type="text" required name="prenom" required>
                   <label>Prenom</label>
               </div>
               <!-- nom validation end here -->
@@ -34,7 +34,7 @@
 
 
               <div class="form-group">
-                  <!-- <!-- <input type="text" name="telephone" required #telephone="ngModel" ngModel /> --> -->
+                  <input type="text" name="telephone" required />
                   <label>Numéro de télèphone</label>
               </div>
 
@@ -49,7 +49,7 @@
 
               <!-- nom validation end here -->
               <div class="form-group">
-                  <!-- <!-- <input type="email" name="email" required #email="ngModel" ngModel /> --> -->
+                  <input type="email" name="email" required/>
                   <label>E-mail</label>
               </div>
               <!-- nom validation end here -->
@@ -60,12 +60,9 @@
               </div>
               <!--END prenom-->
 
-
-
-            
               <!--END num tele-->
               <div class="form-group">
-                  <!-- <!-- <input type="password" name="password" required #password="ngModel" ngModel/> --> -->
+                  <input type="password" name="password" required/>
                   <label>Mot de passe</label>
               </div>
 
@@ -77,7 +74,7 @@
               </div>
               <!--END NOM-->
               <div class="form-group">
-                  <!-- <!-- <input type="password" name="password_confirmation" required #password_confirmation="ngModel" ngModel /> --> -->
+                  <input type="password" name="password_confirmation"/>
                   <label>Confirmer</label>
               </div>
               <!-- nom validation end here -->
@@ -97,7 +94,7 @@
                   <span class="txt1">Vous avez déjà un compte?</span>
                   <a class="txt2" routerLink="/client/login">Connectez-vous</a>
               </div>
-          <!-- </form> -->
+          </form>
       </div>
   </div>
 </div>

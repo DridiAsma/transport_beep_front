@@ -180,36 +180,72 @@
 
 
 
-                        <div class="app-page">
-                          <div #map id="map-canvas"></div>
-                          <div class="map-loader-container">
-                              <div class="map-loader"></div>
-                          </div>
-                           <!-- Customers Card -->
-            <div class="col-xxl-4 col-md-4">
+<div class="app-page">
+  <div #map id="map-canvas"></div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Demander de reservation</h5>
 
-              <div class="card info-card customers-card">
+        <!-- Multi Columns Form -->
+        <form class="row g-3" [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="col-md-12">
+            <label for="inputName5" class="form-label">Recherche</label>
+            <input type="search" class="form-control" [(ngModel)]="placesText" #placesRef="ngx-places" ngx-google-places-autocomplete (onAddressChange)="handleAddressChange($event)">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail5" class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="nbr_persone">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword5" class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="prixclient">
+          </div>
+          <div class="col-6">
+            <label for="inputAddress5" class="form-label">Address</label>
+            <input type="text" class="form-control" formControlName="codepromo" placeholder="commantaires..">
+          </div>
+          <div class="col-6">
+            <label for="inputAddress2" class="form-label">LISTECHAUFFEUR</label>
+            <input type="text" class="form-control" formControlName="chauffeur_id" placeholder="Apartment, studio, or floor">
+          </div>
 
-                <div class="card-body">
-                  <h1>Demande</h1>
-                  <div class="d-flex align-items-center">
-             
-                      <div class="input-box col-lg-12">
-                        <span class="details">Rechercher..</span>
-                        <input type="search" [(ngModel)]="placesText" #placesRef="ngx-places" ngx-google-places-autocomplete (onAddressChange)="handleAddressChange($event)">
-                      </div>
-                      <br><br><br><br><br>
-                      <!-- <div class="input-box col-lg-10">
-                        <span class="details">Nombre de personne</span>
-                        <input type="number">
-                      </div> -->
-                    </div>
-                  
-             
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">PAIEMENT</label>
+            <select formControlName="types_paiment"  class="form-select">
+              <option value="espaces" selected>Espèces</option>
+              <option value="carte">Cartes</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputCity" class="form-label">Distance</label>
+            <input type="text" class="form-control" [value]="distance" formControlName="distance">
+          </div>
+          <div class="col-md-4">
+            <label for="inputZip" class="form-label">Time</label>
+            <input type="text" class="form-control" [value]="time">
+          </div>
+          <!-- <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" formControlName="statut">
+              <label class="form-check-label" for="gridCheck">
+                Vous confirmez que vous acceptez les conditions.
+              </label>
+            </div>
+          </div> -->
+          <div class="ms-3">
+            <h6 class="mb-0">{{name}} </h6>
 
-                </div>
-              </div>
+            <span>{{email}}</span>
+        </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <!-- <button type="reset" class="btn btn-secondary">Reset</button> -->
+          </div>
+        </form><!-- End Multi Columns Form -->
 
-            </div><!-- End Customers Card -->
-     </div>
-     
+      </div>
+    </div>
+  </div>
+</div>
+

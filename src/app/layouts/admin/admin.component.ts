@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthAdminService } from 'src/app/views/services/auth-admin.service';
+
 
 
 interface SideNavToggle{
@@ -27,9 +30,17 @@ export class AdminComponent implements OnInit {
 
 }
 
-  constructor() { }
+constructor(private ads: AuthAdminService, 
+  private route:Router) { }
 
-  ngOnInit(): void {
-  }
+ngOnInit(): void {}
+
+
+logout(){
+  localStorage.removeItem('access_token')
+  localStorage.removeItem('name')
+  localStorage.removeItem('email')
+  this.route.navigate(['/admin/login'])
+}
 
 }

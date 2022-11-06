@@ -44,12 +44,10 @@ import { AsyncPipe } from '@angular/common';
    ToastrModule.forRoot({timeOut: 5000, positionClass: 'toast-top-right', preventDuplicates: true,}),
   //  AngularFireModule.initializeApp(environment.firebase),
   //  SnotifyModule,
-   ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    }),
+  //  ServiceWorkerModule.register('ngsw-worker.js', {
+  //     enabled: environment.production,
+  //     registrationStrategy: 'registerWhenStable:30000'
+  //   }),
     NgbModule
   ],
   providers: [AsyncPipe, 
