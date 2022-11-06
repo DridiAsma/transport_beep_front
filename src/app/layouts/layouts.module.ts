@@ -49,6 +49,9 @@ import { TypesVoitureComponent } from './admin/voiturs/types-voiture/types-voitu
 import { RestPasswordComponent } from './client/rest-password/rest-password.component';
 import { ModifierProfilChauffeurComponent } from './chauffeur/modifier-profil-chauffeur/modifier-profil-chauffeur.component';
 import { ForgetPasswordComponent } from './client/forget-password/forget-password.component';
+import { HistoriqueClientComponent } from './client/historique-client/historique-client.component';
+import { HistoyChauffeurComponent } from './chauffeur/histoy-chauffeur/histoy-chauffeur.component';
+import { ProfailClientComponent } from './client/profail-client/profail-client.component';
 
 
 @NgModule({
@@ -92,7 +95,10 @@ import { ForgetPasswordComponent } from './client/forget-password/forget-passwor
             TypesVoitureComponent,
             RestPasswordComponent,
             ModifierProfilChauffeurComponent,
-            ForgetPasswordComponent
+            ForgetPasswordComponent,
+            HistoriqueClientComponent,
+            HistoyChauffeurComponent,
+            ProfailClientComponent
   ],
   imports: [
     CommonModule,
