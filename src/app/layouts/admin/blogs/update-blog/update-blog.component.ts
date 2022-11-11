@@ -35,7 +35,7 @@ export class UpdateBlogComponent implements OnInit {
 
   editPost(){
     this.dataserv.afficherblog(this.router.snapshot.params['id']).subscribe(
-      (result: any) =>{
+      (result: any) => {
         this.modifForm = new FormGroup({
           description: new FormControl(result['description']),
           jour: new FormControl(result['jour']),
@@ -51,7 +51,7 @@ export class UpdateBlogComponent implements OnInit {
    this.modifForm.value).subscribe(result =>
    {
     console.log(result);
-    this.toastr.success("Saved successfully", "Success");
+    this.toastr.success("Enregister avec success", "Success");
     this.route.navigate(['/admin/listblog'])
    })
 

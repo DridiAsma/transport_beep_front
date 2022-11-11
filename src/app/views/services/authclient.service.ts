@@ -62,6 +62,10 @@ LoggedIn(){
   return this.http.get('http://127.0.0.1:8000/api/client/profile');
  }
 
+ editprofile(data:any){
+
+  return this.http.post('http://127.0.0.1:8000/api/client/edit',data);
+ }
   // getname(){
   //   let token:any=localStorage.getItem('token')
   //   let decodeToken= this.helper.decodeToken(token)

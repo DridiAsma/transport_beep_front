@@ -17,8 +17,11 @@ import { ProfileChauffeurComponent } from './layouts/chauffeur/profile-chauffeur
 import { ClientComponent } from './layouts/client/client.component';
 import { CommandeClientComponent } from './layouts/client/commande-client/commande-client.component';
 import { ForgetPasswordComponent } from './layouts/client/forget-password/forget-password.component';
+import { HistoriqueClientComponent } from './layouts/client/historique-client/historique-client.component';
 import { InscriptionClientComponent } from './layouts/client/inscription-client/inscription-client.component';
 import { LoginClientComponent } from './layouts/client/login-client/login-client.component';
+import { ModifierProfileClientComponent } from './layouts/client/modifier-profile-client/modifier-profile-client.component';
+import { ProfailClientComponent } from './layouts/client/profail-client/profail-client.component';
 import { RestPasswordComponent } from './layouts/client/rest-password/rest-password.component';
 import { SplashScreenComponent } from './layouts/splash-screen/splash-screen.component';
 import { ControllerChauffeurComponent } from './views/controller-chauffeur/controller-chauffeur.component';
@@ -27,23 +30,6 @@ import { GuradclientGuard } from './views/guards/guradclient.guard';
 
 
 const routes: Routes = [
-
- //front
- {
-  // path: '', component: FrontLayoutComponent,
-  // children: [
-  //   { path: '', loadChildren: () => import('./views/front/home/home.module').then(m => m.HomeModule) },
-  //   { path: 'blog', loadChildren: () => import('./views/front/blog/blog.module').then(m => m.BlogModule) },
-  //   { path: 'notifi', loadChildren: () => import('./views/front/notifi/notifi.module').then(m => m.NotifiModule) },
-  //   { path: 'contact', loadChildren: () => import('./views/front/contact/contact.module').then(m => m.ContactModule) },
-  //   { path: 'reservation', loadChildren: () => import('./views/front/reservation/reservation.module').then(m => m.ReservationModule) },
-  // ]
- },
-
-
-
-
-
 
 
   //admin
@@ -79,14 +65,10 @@ const routes: Routes = [
     path: 'chauffeur', component: ChauffeurComponent,
     children: [
       { path: 'commandes', component: CommandeChauffeurComponent},
-      { path: 'profile', component: ProfileChauffeurComponent},
+      { path: 'profilechauffeur', component: ProfileChauffeurComponent},
       { path: 'contact', component: ContactComponent},
-      { path: 'chauffeur',
-          loadChildren: () => import('./layouts/admin/liste-chauffeur/liste-chauffeur.module').then(m => m.ListeChauffeurModule)
-      },
-
-      { path: 'client', loadChildren: () => import('./layouts/admin/liste-client/liste-client.module').then(m => m.ListeClientModule)
-      },
+      { path: 'chauffeur', loadChildren: () => import('./layouts/admin/liste-chauffeur/liste-chauffeur.module').then(m => m.ListeChauffeurModule)},
+      { path: 'client', loadChildren: () => import('./layouts/admin/liste-client/liste-client.module').then(m => m.ListeClientModule)},
 
     ]
   },
@@ -101,10 +83,11 @@ const routes: Routes = [
     path: 'client', component: ClientComponent, canActivate:[GuradclientGuard],
     children: [
       { path: 'commandes', component: CommandeClientComponent },
-      { path: 'historique', component: ContactComponent},
+      { path: 'historique', component: HistoriqueClientComponent},
       { path: 'message', component: ContactComponent},
-      { path: '', component: ContactComponent},
-    
+      { path: 'profilclient', component: ProfailClientComponent},
+      { path: 'modifierprofil', component: ModifierProfileClientComponent},
+
 
 
     ]

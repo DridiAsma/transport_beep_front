@@ -14,29 +14,35 @@
           >
           <i class="far fa-search search-icon"></i>
         </button>
-        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+
         </div>
       </div>
     </div>
 
     <div class="head-content-right">
       <div class="head-menu">
-        <div class="head-menu-item">
+        <!-- <div class="head-menu-item">
           <button class="head-menu-item-btn ripple"
           [cdkMenuTriggerFor]="languageOverlay">
             <img [src]="'assets/img/' + selectedLanguage.flag + '.jpg'"
              class="flag" alt="flag">
           </button>
-        </div>
+        </div> -->
         <div class="head-menu-item">
           <button class="head-menu-item-btn ripple" [cdkMenuTriggerFor]="notificationOverlay">
             <i class="far fa-bell menu-icon"></i>
           </button>
         </div>
-        <div class="head-menu-item">
+        <!-- <div class="head-menu-item">
           <button class="head-menu-item-btn ripple">
             <i class="far fa-interval menu-icon"></i>
           </button>
+        </div> -->
+      </div>
+      <div class="head-user-name-container">
+        <div class="head-user-name">
+          <!-- <img src="../../../../assets/img/gallery/gallery-5.jpg" alt="user" class="user-avatar"> -->
+          <span class="user-name">{{name}}</span>
         </div>
       </div>
       <div class="head-user-avatar-container">
@@ -107,7 +113,9 @@
   <div class="overlay overlay-user overlay-fall" cdkMenu>
     <ul>
       <li *ngFor="let item of userItems" cdkMenuItem>
-        <a>
+        <a [routerLink]="[item.routeLink]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
           <i class="icon" [ngClass]="item.icon">
           </i>
           <span>{{item.label}}</span>

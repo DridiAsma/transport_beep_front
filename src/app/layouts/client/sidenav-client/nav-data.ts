@@ -33,70 +33,19 @@ export const navbarData: INavbarData[] = [
     label: 'Code promo'
   },
 
-  {
-    routeLink: 'passerchauffeur',
-    icon: 'fal fa-location',
-    label: 'Passer en chauffeur'
-  },
-
   // {
-  //   routeLink: 'client',
-  //   icon: 'fal fa-user',
-  //   label: 'Client',
-  //   items: [
-  //     {
-  //       routeLink: 'client/listeclient',
-  //       label: 'Liste compte Client'
-  //     },
-  //     {
-  //       routeLink: 'client/commande',
-  //       label: 'Demande reservation',
-  //     }
-  //   ]
+  //   routeLink: 'profilclient',
+  //   icon: 'fal fa-code',
+  //   label: 'Code promo'
   // },
 
   // {
-  //   routeLink: 'chauffeur',
-  //   icon: 'fal fa-users',
-  //   label: 'Chauffeur',
-  //   items: [
-  //     {
-  //       routeLink: 'chauffeur/liste',
-  //       label: 'Liste compte Chauffeur'
-  //     },
-  //     {
-  //       routeLink: 'chauffeur/afficher',
-  //       label: 'Liste demande',
-  //     }
-  //   ]
-  // },
-
-  // {
-  //   routeLink: 'settings',
-  //   icon: 'fal fa-cog',
-  //   label: 'Settings',
-  //   expanded: true,
-  //   items: [
-  //     {
-  //       routeLink: 'settings/profile',
-  //       label: 'Profile'
-  //     }
-  //   ]
-  // }
-
-  // {
-  //   routeLink: 'paiement',
-  //   icon: 'fal fa-file',
-  //   label: 'Paiement'
+  //   routeLink: 'chauffeur/register',
+  //   icon: 'fal fa-location',
+  //   label: 'Passer en chauffeur'
   // },
 
 
-
-  // {
-  //   routeLink: 'map',
-  //   icon: 'fal fa-camera',
-  //   label: 'Maps'
-  // },
-
+  
 ];
 

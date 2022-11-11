@@ -29,15 +29,18 @@ export const notifications = [
 
 export const userItems = [
   {
+    routeLink: 'profilclient',
     icon: 'far fa-user',
     label: 'Profile'
   },
   {
+    routeLink: 'commandes',
     icon: 'far fa-cog',
     label: 'Settings'
   },
 
   {
+    routeLink: 'logout',
     icon: 'far fa-unlock-alt',
     label: 'Login'
   }

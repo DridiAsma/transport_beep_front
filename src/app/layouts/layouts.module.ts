@@ -52,6 +52,10 @@ import { ForgetPasswordComponent } from './client/forget-password/forget-passwor
 import { HistoriqueClientComponent } from './client/historique-client/historique-client.component';
 import { HistoyChauffeurComponent } from './chauffeur/histoy-chauffeur/histoy-chauffeur.component';
 import { ProfailClientComponent } from './client/profail-client/profail-client.component';
+import { CodePromoChauffeurComponent } from './chauffeur/code-promo-chauffeur/code-promo-chauffeur.component';
+import { HeaderChauffeurComponent } from './chauffeur/header-chauffeur/header-chauffeur.component';
+import { InscriptionClientComponent } from './client/inscription-client/inscription-client.component';
+import { ModifierProfileClientComponent } from './client/modifier-profile-client/modifier-profile-client.component';
 
 
 @NgModule({
@@ -98,7 +102,11 @@ import { ProfailClientComponent } from './client/profail-client/profail-client.c
             ForgetPasswordComponent,
             HistoriqueClientComponent,
             HistoyChauffeurComponent,
-            ProfailClientComponent
+            ProfailClientComponent,
+            CodePromoChauffeurComponent,
+            HeaderChauffeurComponent,
+            InscriptionClientComponent,
+            ModifierProfileClientComponent
   ],
   imports: [
     CommonModule,

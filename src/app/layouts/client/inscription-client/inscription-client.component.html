@@ -4,12 +4,12 @@
           <div class="text-center">
               <div class="title">Créer votre compte</div>
           </div><br>
-          <form class="login100-form validate-form">
+          <form class="login100-form validate-form" #f="ngForm" (ngSubmit)="registerclient(f)">
               <span class="login100-form-title p-b-26">
-              <img class="mb-4" src="assets/app/img/beebeep.png" alt="" width="70" height="70">
+              <img class="mb-4" src="assets/beebeep.png" alt="" width="70" height="70">
             </span>
               <div class="form-group">
-                  <input type="text" required name="name" required>
+                  <input type="text" required name="name" #name="ngModel" ngModel/>
                   <label>Nom</label>
               </div>
               <!-- nom validation end here -->
@@ -21,7 +21,7 @@
               <!--END NOM-->
 
               <div class="form-group">
-                  <input type="text" required name="prenom" required>
+                  <input type="text" name="prenom" required #prenom="ngModel" ngModel />
                   <label>Prenom</label>
               </div>
               <!-- nom validation end here -->
@@ -30,11 +30,10 @@
                       Veuillez choisir prenom
                   </div>
               </div>
-              <!--END prenom-->
 
 
               <div class="form-group">
-                  <input type="text" name="telephone" required />
+                  <input type="text" name="telephone" required #telephone="ngModel" ngModel />
                   <label>Numéro de télèphone</label>
               </div>
 
@@ -49,7 +48,7 @@
 
               <!-- nom validation end here -->
               <div class="form-group">
-                  <input type="email" name="email" required/>
+                  <input type="email" name="email" required #email="ngModel" ngModel />
                   <label>E-mail</label>
               </div>
               <!-- nom validation end here -->
@@ -60,9 +59,12 @@
               </div>
               <!--END prenom-->
 
+
+
+
               <!--END num tele-->
               <div class="form-group">
-                  <input type="password" name="password" required/>
+                  <input type="password" name="password" required #password="ngModel" ngModel/>
                   <label>Mot de passe</label>
               </div>
 
@@ -74,7 +76,7 @@
               </div>
               <!--END NOM-->
               <div class="form-group">
-                  <input type="password" name="password_confirmation"/>
+                  <input type="password" name="password_confirmation" required #password_confirmation="ngModel" ngModel />
                   <label>Confirmer</label>
               </div>
               <!-- nom validation end here -->
@@ -98,7 +100,6 @@
       </div>
   </div>
 </div>
-
 <!--<div class="limiter">
   <div class="container-login100">
       <div class="wrap-login100">

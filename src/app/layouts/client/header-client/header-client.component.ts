@@ -19,7 +19,19 @@ export class HeaderClientComponent implements OnInit {
   notifications = notifications;
   userItems = userItems;
   
-  constructor() { }
+
+  name: any ="";
+  // email:  any ="";
+  isLogged:boolean=false;
+
+  constructor() { 
+    if(localStorage.getItem("token")){
+      this.name=localStorage.getItem("name");
+      // this.email=localStorage.getItem("email");
+    }else{
+      this.isLogged = false;
+    }
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
