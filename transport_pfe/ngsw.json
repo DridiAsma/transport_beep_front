@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1667756720303,
+  "timestamp": 1668158297425,
   "index": "https:///DridiAsma.github.io/transport_beep_front/index.html",
   "assetGroups": [
     {
@@ -11,15 +11,15 @@
         "ignoreVary": true
       },
       "urls": [
-        "https:///DridiAsma.github.io/transport_beep_front/434.eae8bb59342b8099.js",
-        "https:///DridiAsma.github.io/transport_beep_front/656.c77382b63d2a14f4.js",
+        "https:///DridiAsma.github.io/transport_beep_front/434.008d0fc66f22b55c.js",
+        "https:///DridiAsma.github.io/transport_beep_front/656.a0e0eb61503d3709.js",
         "https:///DridiAsma.github.io/transport_beep_front/common.a78f23367ada6e34.js",
         "https:///DridiAsma.github.io/transport_beep_front/favicon.ico",
         "https:///DridiAsma.github.io/transport_beep_front/index.html",
-        "https:///DridiAsma.github.io/transport_beep_front/main.c30c60a050e4b1d8.js",
+        "https:///DridiAsma.github.io/transport_beep_front/main.5a86729bed126e17.js",
         "https:///DridiAsma.github.io/transport_beep_front/manifest.webmanifest",
         "https:///DridiAsma.github.io/transport_beep_front/polyfills.04977061f8a447c7.js",
-        "https:///DridiAsma.github.io/transport_beep_front/runtime.632e1574e293ac8e.js",
+        "https:///DridiAsma.github.io/transport_beep_front/runtime.9f904c7dcada85b4.js",
         "https:///DridiAsma.github.io/transport_beep_front/styles.6336189ea5e592e3.css"
       ],
       "patterns": []
@@ -903,6 +903,7 @@
         "https:///DridiAsma.github.io/transport_beep_front/assets/assetss/vendor/tinymce/tinymce.d.ts",
         "https:///DridiAsma.github.io/transport_beep_front/assets/assetss/vendor/tinymce/tinymce.js",
         "https:///DridiAsma.github.io/transport_beep_front/assets/assetss/vendor/tinymce/tinymce.min.js",
+        "https:///DridiAsma.github.io/transport_beep_front/assets/beebeep.png",
         "https:///DridiAsma.github.io/transport_beep_front/assets/blue-marker.png",
         "https:///DridiAsma.github.io/transport_beep_front/assets/blue-pin.svg",
         "https:///DridiAsma.github.io/transport_beep_front/assets/bus-g970a83ae1_640.png",
@@ -1027,8 +1028,8 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "https:///DridiAsma.github.io/transport_beep_front/434.eae8bb59342b8099.js": "712193512694db0e70c51e61ff38b6e72a034df5",
-    "https:///DridiAsma.github.io/transport_beep_front/656.c77382b63d2a14f4.js": "42eb39a28c51e1f55884fa76d377618222b7e70f",
+    "https:///DridiAsma.github.io/transport_beep_front/434.008d0fc66f22b55c.js": "6fcb610fb592adab1f0a6a2d487dfbd14a62f9aa",
+    "https:///DridiAsma.github.io/transport_beep_front/656.a0e0eb61503d3709.js": "703c1d1788f899fde43adb544d8248ac915dc25a",
     "https:///DridiAsma.github.io/transport_beep_front/assets/app/css/LineIcons.2.0.css": "f56df8efebd1f3dba02250694cbaeff17e1c01de",
     "https:///DridiAsma.github.io/transport_beep_front/assets/app/css/animate.css": "9f6f4b7bb103877ac2b7962913e6dee4202b769f",
     "https:///DridiAsma.github.io/transport_beep_front/assets/app/css/bootstrap-5.0.0-alpha-2.min.css": "52e34b727984148d4a8757bbd8bfa541f13fe193",
@@ -1900,6 +1901,7 @@
     "https:///DridiAsma.github.io/transport_beep_front/assets/assetss/vendor/tinymce/tinymce.d.ts": "38d4828e19b893806cc5ce98535a3fdd1fa6a240",
     "https:///DridiAsma.github.io/transport_beep_front/assets/assetss/vendor/tinymce/tinymce.js": "9170b31e53307a3296661da6cfff7c2be7c4d7d5",
     "https:///DridiAsma.github.io/transport_beep_front/assets/assetss/vendor/tinymce/tinymce.min.js": "d647f7eac06db8c41c9852a568638496776d335d",
+    "https:///DridiAsma.github.io/transport_beep_front/assets/beebeep.png": "34d74ec4d896c4a58cfbe4177bded30b1e70e0c3",
     "https:///DridiAsma.github.io/transport_beep_front/assets/blue-marker.png": "d0eeb38c9a1221ca828484c28e8c881efcf06c96",
     "https:///DridiAsma.github.io/transport_beep_front/assets/blue-pin.svg": "aa29ce17621179319399885b642861959a4923b8",
     "https:///DridiAsma.github.io/transport_beep_front/assets/bus-g970a83ae1_640.png": "1739635e787e0f35231bfca14b615c00a1278080",
@@ -2019,12 +2021,12 @@
     "https:///DridiAsma.github.io/transport_beep_front/assets/taxi-icon.svg": "e8769eedeaedd4db1aed270cba6e50422eb8fd93",
     "https:///DridiAsma.github.io/transport_beep_front/common.a78f23367ada6e34.js": "5d3ea1b17ec912250ac089b92a64a7f6de15421c",
     "https:///DridiAsma.github.io/transport_beep_front/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https:///DridiAsma.github.io/transport_beep_front/index.html": "a75e2543ce2ae5fe08623edd8a2a51299e2878f7",
-    "https:///DridiAsma.github.io/transport_beep_front/main.c30c60a050e4b1d8.js": "a054473e2257f050c7e2ea053c70782f32555036",
+    "https:///DridiAsma.github.io/transport_beep_front/index.html": "8882281e6b97d683bf55a68150e49636fee77eaa",
+    "https:///DridiAsma.github.io/transport_beep_front/main.5a86729bed126e17.js": "004adc0ccd992bd6d2cf12d27de264897d47cb77",
     "https:///DridiAsma.github.io/transport_beep_front/manifest.webmanifest": "27437ef05748792d7de02ec444bd19e857ffaa31",
     "https:///DridiAsma.github.io/transport_beep_front/polyfills.04977061f8a447c7.js": "9e5324a013c16f2d37019dc1656e756e18f7558a",
     "https:///DridiAsma.github.io/transport_beep_front/puff.e7427b3a31db74ed.svg": "3e060e3f4857d3db8a13832678d55d1a5c54c801",
-    "https:///DridiAsma.github.io/transport_beep_front/runtime.632e1574e293ac8e.js": "90a44bb1e0a985e095cd58379ca1733738c6d489",
+    "https:///DridiAsma.github.io/transport_beep_front/runtime.9f904c7dcada85b4.js": "5c208b9c147b60a94ecb3ff806a3d69051bee81f",
     "https:///DridiAsma.github.io/transport_beep_front/styles.6336189ea5e592e3.css": "505f1ad61a862d0e7ff6a98777f421aa75dd9467"
   },
   "navigationUrls": [
